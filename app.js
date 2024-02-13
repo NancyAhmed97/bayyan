@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
-const PORT = 7000 || process.env.PORT;
+const PORT = 3000 || process.env.PORT;
 
 require('dotenv/config');
 // const authJwt = require('./helpers/jwt');
@@ -34,19 +34,8 @@ const api = process.env.API_URL;
 
 app.use(`${api}/users`, usersRoutes);
 
-//Database
-//mongoose.connect(process.env.CONNECTION_STRING)
-//.then(()=>{
-  //  console.log('Database Connection is ready...')
-//})
-//.catch((err)=> {
-  //  console.log(err);
-//})
 
+app.listen(PORT, ()=>{
 
-
-app.listen(7000, ()=>{
-
-    console.log('server is running http://localhost:7000');
+    console.log('server is running http://localhost:3000');
 })
-console.log('dfjkjmvfcdxcvml');
